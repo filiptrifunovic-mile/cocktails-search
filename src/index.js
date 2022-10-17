@@ -3,15 +3,13 @@ import { createRoot } from "react-dom/client";
 import App from "./App.js";
 import "normalize.css";
 import "./index.css";
-
-import { store } from "./store.js";
-import { Provider } from "react-redux";
+import { AppProvider } from "./context";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  <Provider store={store}>
+  <AppProvider>
     <App tab="home" />
-  </Provider>
+  </AppProvider>
 );
